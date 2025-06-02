@@ -11,7 +11,7 @@ import EmergencyCall from "../emergency-call/page"
 import DailyCheckin from "../daily-checkin/page"
 import CoupleGoals from "../couple-goals/page"
 import VoiceNotes from "../voice-notes/page"
-import AdminDashboard from "../admin/page"
+// import AdminDashboard from "../admin/page"
 import LoveLetters from "../love-letters/page"
 import NotificationSystem from "../notifications/notification-system"
 
@@ -99,11 +99,8 @@ export default function Dashboard({ currentUser, setIsAuthenticated }: Dashboard
     return <LoveLetters currentUser={currentUser} onBack={() => setActiveTab("dashboard")} />
   }
 
-  if (activeTab === "admin" && currentUser.toLowerCase() === "victor") {
-    return <AdminDashboard currentUser={currentUser} onBack={() => setActiveTab("dashboard")} />
-  }
 
-  return (
+  // return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 p-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -350,5 +347,4 @@ export default function Dashboard({ currentUser, setIsAuthenticated }: Dashboard
         </Card>
       </div>
     </div>
-  )
 }
